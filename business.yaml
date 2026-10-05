@@ -1,0 +1,39 @@
+# Everything business-specific lives here. Swap this file to onboard a new business.
+name: Olive Consults LLC.
+owner_name: Olive
+# Calls to the Twilio number are forwarded here. Can be overridden with OWNER_PHONE in .env.
+owner_phone: "+15555550100"
+timezone: America/New_York
+hours:
+  monday: "9:00-17:00"
+  tuesday: "9:00-17:00"
+  wednesday: "9:00-17:00"
+  thursday: "9:00-17:00"
+  friday: "9:00-15:00"
+  saturday: closed
+  sunday: closed
+booking_link: https://cal.example.com/olive-consults/intro-call
+
+# Sent when a call goes unanswered. Placeholders: {business_name}, {booking_link}
+missed_call_message: >-
+  Hi from {business_name} Sorry we missed your call! How can we help?
+  Reply here by text, or book a free 15-minute intro call: {booking_link}
+
+faqs:
+  - question: What services do you offer?
+    answer: >-
+      IT and cloud consulting for small businesses: cloud migrations, Microsoft 365
+      and Google Workspace setup, security reviews, and automation.
+  - question: How much does a consultation cost?
+    answer: The first 15-minute intro call is free. Project pricing is quoted after that call.
+  - question: Do you work remotely?
+    answer: Yes, we work with clients anywhere in the US, fully remote.
+
+# Messages containing these are flagged for owner approval (Milestone 2)
+urgency_keywords:
+  - urgent
+  - emergency
+  - asap
+  - down
+  - outage
+  - hacked
